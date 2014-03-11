@@ -1,0 +1,19 @@
+﻿@model MonsterAdmin.Models.RefCategory
+
+@{
+    ViewBag.Title = "Create Category";
+}
+
+<div class="content">
+    <div id="pad-wrapper" class="form-page">
+        <div class="row head">
+            <div class="col-md-12">
+                <h4>Create Category</h4>
+            </div>
+        </div>
+
+        @RenderPage("_form.cshtml")
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/form")

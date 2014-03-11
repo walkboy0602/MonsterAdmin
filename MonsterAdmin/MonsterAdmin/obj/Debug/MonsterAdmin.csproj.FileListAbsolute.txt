@@ -1,0 +1,5 @@
+C:\Users\kho001\Documents\GitHub\Monster\MonsterAdmin\MonsterAdmin\bin\MonsterAdmin.dll.config
+C:\Users\kho001\Documents\GitHub\Monster\MonsterAdmin\MonsterAdmin\bin\MonsterAdmin.dll
+C:\Users\kho001\Documents\GitHub\Monster\MonsterAdmin\MonsterAdmin\bin\MonsterAdmin.pdb
+C:\Users\kho001\Documents\GitHub\Monster\MonsterAdmin\MonsterAdmin\obj\Debug\MonsterAdmin.dll
+C:\Users\kho001\Documents\GitHub\Monster\MonsterAdmin\MonsterAdmin\obj\Debug\MonsterAdmin.pdb

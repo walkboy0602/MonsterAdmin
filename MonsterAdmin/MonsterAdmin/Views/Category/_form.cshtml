@@ -1,0 +1,77 @@
+﻿@model MonsterAdmin.Models.RefCategory
+
+@using (Html.BeginForm())
+{
+    <div class="row form-wrapper" data-ng-controller="CategoryCreateCtrl">
+
+        <div class="col-md-12">
+            <div class="col-md-8">
+                <div class="field-box">
+                    <label>Category Name</label>
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control inline-input", placeholder = "Enter Name here." })
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                </div>
+                <div class="field-box">
+                    <label>Parent Category</label>
+                    <div class="col-md-8">
+                        @Html.DropDownList("ParentID", ViewBag.Categories as SelectList, "", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="field-box">
+                    <label>Description</label>
+                    <div class="col-md-8">
+                        @Html.TextAreaFor(m => m.Description, new { @class = "form-control", placeholder = "Some Description." })
+                        @Html.ValidationMessageFor(m => m.Description)
+                    </div>
+                </div>
+                <div class="field-box">
+                    <label>Meta Description</label>
+                    <div class="col-md-8">
+                        @Html.TextAreaFor(m => m.MetaDescription, new { @class = "form-control", placeholder = "Meta Description." })
+                        @Html.ValidationMessageFor(m => m.MetaDescription)
+                    </div>
+                </div>
+                <div class="field-box">
+                    <label>Meta Keyword</label>
+                    <div class="col-md-8">
+                        @Html.TextAreaFor(m => m.MetaKeyword, new { @class = "form-control", placeholder = "Meta Keyword." })
+                        @Html.ValidationMessageFor(m => m.MetaKeyword)
+                    </div>
+                </div>
+                <div class="field-box">
+                    <label>Status</label>
+                    <div class="col-md-8">
+                        <label class="radio">
+                            @Html.RadioButtonFor(model => model.isActive, true, new { Checked = "checked" }) &nbsp;
+                            <span class="label label-success">Active</span>
+                        </label>
+                        <label class="radio">
+                            @Html.RadioButtonFor(model => model.isActive, false) &nbsp;
+                            <span class="label label-danger">Inactive</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="field-box">
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-10">
+        <div class="pull-right">
+            @*<button type="button" disabled="" class="btn-glow primary btn-prev">
+                    <i class="fa fa-chevron-left"></i> Save
+                </button>
+                <button type="button" class="btn-glow primary btn-next" >
+                    Next <i class="fa fa-chevron-right"></i>
+                </button>*@
+            <button type="submit" class="btn-glow success btn-finish">
+                Save
+            </button>
+        </div>
+    </div>
+}
